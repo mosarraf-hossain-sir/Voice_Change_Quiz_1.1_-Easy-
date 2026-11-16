@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HM Online Education - Active and Passive Voice MCQ Test">
+  <title>Voice Change Quiz | Mosarraf Hossain Sir</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="fx"></canvas>
+  <header class="site-header">
+    <h1 class="brand">Mosarraf Hossain Sir</h1>
+    <div class="tag">Online Quiz World</div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="hero">
+      <h2>Mosarraf Hossain Sir<br>এর<br>Online Quiz World<br>এ তোমাকে স্বাগতম!</h2>
+      <p>এখানে অনুশীলনের মাধ্যমে নিজের দক্ষতা যাচাই করো এবং জ্ঞানের পরিধি বাড়াও।</p>
+      <div class="instructions">
+        <h3>নির্দেশনা:</h3>
+        <ol>
+          <li>প্রতিটি প্রশ্ন ভালোভাবে পড়ে সঠিক উত্তর নির্বাচন করো।</li>
+          <li>প্রতিটি প্রশ্নের জন্য একটি উত্তর বেছে নাও।</li>
+          <li>সব প্রশ্নের উত্তর দিয়ে Submit বাটনে ক্লিক করো।</li>
+          <li>পরীক্ষা শুরু হওয়ার পর <span class="js-min"></span> মিনিটের Countdown Timer চলবে।</li>
+          <li>সময় শেষ হলে উত্তর না দেওয়া প্রশ্নসহ Quiz স্বয়ংক্রিয়ভাবে Submit হবে।</li>
+          <li>Submit করার পর তোমার প্রাপ্ত নম্বর ও ফলাফল দেখতে পাবে।</li>
+          <li>ভুল উত্তরগুলো থেকে সঠিক উত্তর শেখার চেষ্টা করো।</li>
+          <li>যতক্ষণ না সব প্রশ্নের সঠিক উত্তর দিতে পারছ, ততক্ষণ চেষ্টা চালিয়ে যাও। বারবার পরীক্ষা দাও, নিজের ভুলগুলো সংশোধন করো এবং শতভাগ সাফল্য অর্জন করো।</li>
+        </ol>
+      </div>
+      <p class="wish">শুভ হোক তোমার শেখার যাত্রা!<br>মনে রেখো: অনুশীলনই দক্ষতার চাবিকাঠি!</p>
+      <button type="button" class="btn start" id="startBtn">Start Quiz</button>
+    </section>
+
+    <section id="after" class="hidden">
+      <div class="info" id="info"></div>
+
+      <div class="quiz-card">
+        <div class="bar">
+          <div>Time: <b id="countdown">00:00</b></div>
+          <div>Attempt: <b id="attemptNumber">01</b></div>
+        </div>
+        <div class="progress-row">
+          <strong>উত্তর দেওয়ার অগ্রগতি</strong>
+          <span id="progressText">০ / ০</span>
+        </div>
+        <div class="progress-track"><div id="progressBar"></div></div>
+
+        <form id="quizForm">
+          <div id="questions"></div>
+          <div class="actions">
+            <button type="button" class="btn secondary" id="resetBtn">আবার শুরু করো</button>
+            <button type="submit" class="btn primary" id="submitBtn">উত্তর জমা দাও</button>
+          </div>
+        </form>
+
+        <section id="result" class="result hidden" aria-live="polite"></section>
+      </div>
+    </section>
+
+    <footer>© Mosarraf Hossain Sir | Online Quiz World</footer>
+  </main>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
